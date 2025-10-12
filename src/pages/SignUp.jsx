@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../context/userContext";
 
 
 const SignUp = () => {
+  const {setUser} = React.useContext(UserContext);
+
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -24,7 +27,7 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
-    // Here you can add further submission logic, like sending data to a server
+    setUser(formData);
     navigate("/account");
   };
 
