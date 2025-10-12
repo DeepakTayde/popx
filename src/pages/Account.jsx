@@ -2,7 +2,7 @@ import React from 'react'
 
 const Account = () => {
   return (
-    <div>Account</div>
+    <div className='flex flex-col '></div>
   )
 }
 

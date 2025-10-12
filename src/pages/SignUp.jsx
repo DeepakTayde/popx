@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const SignUp = () => {
     company: "",
     agency: "no",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,6 +25,7 @@ const SignUp = () => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
     // Here you can add further submission logic, like sending data to a server
+    navigate("/account");
   };
 
   return (
@@ -40,8 +43,8 @@ const SignUp = () => {
                 type="text"
                 value={formData.fullName}
                 onChange={handleChange}
-                placeholder=" "
-                className="peer block w-full font-Inter font-medium  appearance-none rounded-lg border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
+                placeholder=" Enter Full Name"
+                className="peer block w-full font-Inter font-medium  appearance-none rounded border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
                 aria-label="Name"
                 required
               />
@@ -51,7 +54,7 @@ const SignUp = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Full Name
+                Full Name<span className="text-red-500">*</span>
               </label>
             </div>
             <div className="relative">
@@ -62,8 +65,8 @@ const SignUp = () => {
                 type="number"
                 value={formData.phone}
                 // onChange={}
-                placeholder=" "
-                className="peer block w-full font-Inter font-medium  appearance-none rounded-lg border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
+                placeholder="Enter Phone No."
+                className="peer block w-full font-Inter font-medium  appearance-none rounded border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
                 aria-label="Phone"
                 required
               />
@@ -73,7 +76,7 @@ const SignUp = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Phone No.
+                Phone No.<span className="text-red-500">*</span>
               </label>
             </div>
             <div className="relative">
@@ -84,8 +87,8 @@ const SignUp = () => {
                 type="email"
                 value={formData.email}
                 // onChange={}
-                placeholder=" "
-                className="peer block w-full font-Inter font-medium  appearance-none rounded-lg border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
+                placeholder="Enter Email address"
+                className="peer block w-full font-Inter font-medium  appearance-none rounded border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
                 aria-label="Email"
                 required
               />
@@ -95,7 +98,7 @@ const SignUp = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Email
+                Email<span className="text-red-500">*</span>
               </label>
             </div>
             <div className="relative">
@@ -106,8 +109,8 @@ const SignUp = () => {
                 type="password"
                 value={formData.password}
                 // onChange={}
-                placeholder=" "
-                className="peer block w-full font-Inter font-medium  appearance-none rounded-lg border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
+                placeholder="Enter Password"
+                className="peer block w-full font-Inter font-medium  appearance-none rounded border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
                 aria-label="Password"
                 required
               />
@@ -117,7 +120,7 @@ const SignUp = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Password
+                Password<span className="text-red-500">*</span>
               </label>
             </div>
             <div className="relative">
@@ -128,8 +131,8 @@ const SignUp = () => {
                 type="text"
                 value={formData.company}
                 // onChange={}
-                placeholder=" "
-                className="peer block w-full font-Inter font-medium  appearance-none rounded-lg border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
+                placeholder="Enter Company"
+                className="peer block w-full font-Inter font-medium  appearance-none rounded border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
                 aria-label="Company"
                 required
               />
@@ -139,10 +142,10 @@ const SignUp = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Company
+                Company<span className="text-red-500">*</span>
               </label>
             </div>
-            <h4 className="font-Inter text-gray-900">Are you Agency?</h4>
+            <h4 className="font-Inter text-gray-900">Are you Agency?<span className="text-red-500">*</span></h4>
             <div className="flex gap-6">
               <div className="flex items-center me-4">
                 <input
