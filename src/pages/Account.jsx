@@ -21,7 +21,7 @@ const Account = () => {
       </div>
       <div className="w-full h-full flex flex-col">
         <div className="w-full  flex justify-start items-start py-5 gap-5">
-          <img src={user?.profilePic || "https://i.pravatar.cc/100"} alt="" className="w-15 h-15 rounded-full bg-purple-500"/>
+          <img src={"https://i.pravatar.cc/100"} alt="" className="w-15 h-15 rounded-full bg-purple-500"/>
           <div className="flex flex-col">
             <h2 className="text-gray-900 font-Inter font-bold">{user?.fullName || "John Doe"}</h2>
             <h3 className="text-gray-600 font-Inter ">{user?.email || "johndoe@gmail.com"}</h3>
