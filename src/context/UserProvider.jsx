@@ -1,6 +1,6 @@
 // src/context/UserProvider.jsx
 import React, { useState } from "react";
-import { UserContext } from "./UserContext";
+import { UserContext } from "./UserContext.jsx";
 
 
 export default function UserProvider({ children }) {
