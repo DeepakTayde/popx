@@ -13,11 +13,11 @@ const Account = () => {
 
   return (
     <div className="flex flex-col justify-start items-start w-full h-full">
-      <div className="w-full flex justify-between bg-white">
+      <div className="w-full flex justify-between bg-white items-center">
         <h3 className="text-gray-900 font-Inter font-bold  py-5">
           Account Settings
         </h3>
-        <button onClick={handleLogout} className="py-0 px-2 text-sm rounded font-Inter bg-primary text-white">Logout</button>
+        <button onClick={handleLogout} className=" px-3 py-2 text-sm rounded font-Inter bg-primary text-white">Logout</button>
       </div>
       <div className="w-full h-full flex flex-col">
         <div className="w-full  flex justify-start items-start py-5 gap-5">

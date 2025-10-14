@@ -7,9 +7,9 @@ import Account from "./pages/Account";
 
 function App() {
   return (
-    <div className="w-full h-screen overflow-hidden bg-global-bg flex items-center justify-center p-5">
-      <div className="w-full  h-full  flex items-center justify-center">
-        <div className="w-[360px] h-full relative flex flex-col justify-end  overflow-hidden">
+    <div className="w-full h-screen overflow-hidden bg-global-bg flex items-center justify-center p-5  ">
+      <div className="w-full  h-full  flex items-center justify-center ">
+        <div className="w-[360px] h-full relative flex flex-col justify-end px-5 border rounded border-gray-900 overflow-hidden">
 
           <Routes>
             <Route path="/" element={<Welcome/>}/>
