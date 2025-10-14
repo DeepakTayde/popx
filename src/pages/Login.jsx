@@ -26,9 +26,13 @@ const Login = () => {
     <form className="h-full pb-5 pt-5" action="" onSubmit={handleSubmit}>
       <div className="h-full flex flex-col  gap-4 pb-2">
         <div className="text-left flex flex-col">
-          <h1 className="text-2xl font-Inter font-bold ">Signin to your</h1>
+          <div className="mb-4">
+                      <h1 className="text-2xl font-Inter font-bold ">Signin to your</h1>
           <h1 className="text-2xl font-Inter font-bold ">PopX Account</h1>
-
+        <p className=" text-gray-500 ">Lorem ipsum dolor sit amet,</p>
+        <p className=" text-gray-500 "> consectetur adipiscing elit.</p>
+      
+          </div>
           <div className="mt-4 flex flex-col gap-4">
             <div className="relative">
               <input
@@ -49,7 +53,7 @@ const Login = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Email<span className="text-red-500">*</span>
+                Email Address
               </label>
             </div>
             <div className="relative">
@@ -68,10 +72,8 @@ const Login = () => {
               <label
                 htmlFor="password"
                 className="absolute left-3 z-10 bg-global-bg px-2 transform font-Inter font-bold  text-primary duration-200
-                     top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
-                      "
-              >
-                Password<span className="text-red-500">*</span>
+                     top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100">
+                Password
               </label>
             </div>
           </div>

@@ -65,10 +65,10 @@ const SignUp = () => {
                 onChange={handleChange}
                 id="phone"
                 name="phone"
-                type="number"
+                type="tel"
                 value={formData.phone}
-                // onChange={}
                 placeholder="Enter Phone No."
+                pattern="[0-9]{10}"
                 className="peer block w-full font-Inter font-medium  appearance-none rounded border border-input-border bg-transparent px-3 pb-2.5 pt-4 text-sm text-gray-900 focus:outline-none focus:ring-0 "
                 aria-label="Phone"
                 required
@@ -79,7 +79,7 @@ const SignUp = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Phone No.<span className="text-red-500">*</span>
+                Phone number<span className="text-red-500">*</span>
               </label>
             </div>
             <div className="relative">
@@ -101,7 +101,7 @@ const SignUp = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Email<span className="text-red-500">*</span>
+                Email address<span className="text-red-500">*</span>
               </label>
             </div>
             <div className="relative">
@@ -145,10 +145,10 @@ const SignUp = () => {
                      top-0 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100
                       "
               >
-                Company<span className="text-red-500">*</span>
+                Company name<span className="text-red-500">*</span>
               </label>
             </div>
-            <h4 className="font-Inter text-gray-900">Are you Agency?<span className="text-red-500">*</span></h4>
+            <h4 className="font-Inter text-gray-900">Are you an Agency?<span className="text-red-500">*</span></h4>
             <div className="flex gap-6">
               <div className="flex items-center me-4">
                 <input
@@ -192,7 +192,7 @@ const SignUp = () => {
             type="submit"
             className="w-full bg-primary text-white py-2 rounded font-bold font-Inter cursor-pointer "
           >
-            Sign Up
+            Create Account
           </button>
         </div>
       </div>
