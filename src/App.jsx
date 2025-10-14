@@ -12,10 +12,10 @@ function App() {
         <div className="w-[360px] h-full relative flex flex-col justify-end px-5 border rounded border-gray-900 overflow-hidden">
 
           <Routes>
-            <Route path="/" element={<Welcome/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/signup" element={<SignUp/>}/>
-            <Route path='/account' element={<Account/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
+          <Route path='/account' element={<Account/>}/>
+          <Route path="/" element={<Welcome/>}/>
           </Routes>
 
         </div>
